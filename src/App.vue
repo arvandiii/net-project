@@ -1,14 +1,17 @@
 <template>
   <section class="section">
-    <app-user></app-user>
+    <app-quote>
+      <h1>Heloooo</h1>
+      <p>Salam</p>
+    </app-quote>
   </section>
 </template>
 
 <script>
-import User from "./components/User.vue";
+import Quote from "./components/Quote.vue";
 export default {
   components: {
-    "app-user": User
+    "app-quote": Quote
   }
 };
 </script>
