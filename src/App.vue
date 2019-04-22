@@ -1,10 +1,22 @@
 <template>
-  <section class="section"></section>
+  <section class="section">
+    <app-header></app-header>
+    <hr>
+    <router-view></router-view>
+  </section>
 </template>
 
 <script>
-export default {};
+import Header from "./components/Header.vue";
+export default {
+  data() {
+    return {};
+  },
+  components: {
+    "app-header": Header
+  }
+};
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 </style>
