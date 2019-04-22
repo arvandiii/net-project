@@ -1,23 +1,25 @@
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item">
+      <router-link tag="a" to="/" class="navbar-item">
         <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-      </a>
+      </router-link>
     </div>
 
     <div class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item">Home</a>
+        <router-link tag="a" to="/" class="navbar-item">Home</router-link>
       </div>
 
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary">
+            <router-link tag="a" to="/register" class="button is-primary">
               <strong>Sign up</strong>
-            </a>
-            <a class="button is-light">Log in</a>
+            </router-link>
+            <router-link tag="a" to="/login" class="button is-light">
+              <strong>Log in</strong>
+            </router-link>
           </div>
         </div>
       </div>
