@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <div>
     <h1 class="title">we are in Home component</h1>
-  </section>
+  </div>
 </template>

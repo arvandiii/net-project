@@ -1,9 +1,18 @@
-import A from "./components/A.vue";
-import B from "./components/B.vue";
+import User from "./components/User.vue";
 import Home from "./components/Home.vue";
+import UserStart from "./components/UserStart.vue";
+import UserDetail from "./components/UserDetail.vue";
+import UserEdit from "./components/UserEdit.vue";
 
 export const routes = [
   { path: "", component: Home },
-  { path: "/A", component: A },
-  { path: "/B", component: B }
+  {
+    path: "/user",
+    component: User,
+    children: [
+      { path: "", component: UserStart },
+      { path: ":id", component: UserDetail },
+      { path: ":id/edit", component: UserEdit }
+    ]
+  }
 ];
