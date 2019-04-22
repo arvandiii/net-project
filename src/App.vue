@@ -1,19 +1,21 @@
 <template>
   <section class="section">
-    <app-header></app-header>
+    <app-result></app-result>
     <hr>
-    <router-view></router-view>
+    <app-counter></app-counter>
   </section>
 </template>
 
 <script>
-import Header from "./components/Header.vue";
+import Counter from "./components/Counter.vue";
+import Result from "./components/Result.vue";
 export default {
   data() {
     return {};
   },
   components: {
-    "app-header": Header
+    "app-counter": Counter,
+    "app-result": Result
   }
 };
 </script>
