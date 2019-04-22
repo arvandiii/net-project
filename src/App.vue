@@ -1,13 +1,13 @@
 <template>
-  <section class="section"></section>
+  <div>
+    <app-header></app-header>
+  </div>
 </template>
 
 <script>
+import Header from "./components/Header.vue";
 export default {
-  data() {
-    return {};
-  },
-  components: {}
+  components: { "app-header": Header }
 };
 </script>
 
