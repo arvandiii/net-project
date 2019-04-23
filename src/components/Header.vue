@@ -9,10 +9,18 @@
 
       <div class="navbar-end">
         <div class="navbar-item">
-          <div class="buttons">
+          <div class="buttons" v-if="user">
             <a class="button is-dark">
               <strong>Log out</strong>
             </a>
+          </div>
+          <div class="buttons" v-else>
+            <router-link tag="a" to="/login" class="button is-dark">
+              <strong>Log in</strong>
+            </router-link>
+            <router-link tag="a" to="/register" class="button is-light">
+              <strong>Sign up</strong>
+            </router-link>
           </div>
         </div>
       </div>
@@ -21,7 +29,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      user: null
+    };
+  }
+};
 </script>
 
 <style>

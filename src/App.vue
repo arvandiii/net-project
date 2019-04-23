@@ -13,9 +13,7 @@ const roles = ["admin", "teacher", "student", "staff"];
 export default {
   data() {
     return {
-      user: {
-        role: ""
-      }
+      user: null
     };
   },
   components: { "app-header": Header }
