@@ -31,9 +31,12 @@
 <script>
 export default {
   data() {
-    return {
-      user: null
-    };
+    return {};
+  },
+  computed: {
+    user() {
+      return this.$store.getters.user;
+    }
   }
 };
 </script>

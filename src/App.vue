@@ -2,19 +2,21 @@
   <div>
     <app-header></app-header>
     <router-view></router-view>
+    user: {{user}}
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
 
-const roles = ["admin", "teacher", "student", "staff"];
-
 export default {
   data() {
-    return {
-      user: null
-    };
+    return {};
+  },
+  computed: {
+    user() {
+      return this.$store.getters.user;
+    }
   },
   components: { "app-header": Header }
 };
