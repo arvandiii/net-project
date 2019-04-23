@@ -31,7 +31,7 @@
 
             <br>
 
-            <button class="button is-link is-fullwidth">Login</button>
+            <button class="button is-info is-fullwidth">Login</button>
           </form>
 
           <br>
