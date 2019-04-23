@@ -2,7 +2,7 @@
   <div>
     <app-header></app-header>
     <router-view></router-view>
-    user: {{user}}
+    user: {{user.name}} {{user.role}}
   </div>
 </template>
 

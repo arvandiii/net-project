@@ -13,7 +13,7 @@ const users = [
 
 export const store = new Vuex.Store({
   state: {
-    user: users[0]
+    user: users[1]
   },
   getters: {
     user: state => {
