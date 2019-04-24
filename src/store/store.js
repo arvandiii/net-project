@@ -13,11 +13,14 @@ const users = [
 
 export const store = new Vuex.Store({
   state: {
-    user: users[1]
+    user: users[0]
   },
   getters: {
     user: state => {
       return state.user;
     }
+  },
+  mutations: {
+    changeUser(state) {}
   }
 });

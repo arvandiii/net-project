@@ -5,6 +5,9 @@
         <router-link tag="a" to="/" class="navbar-item">Home</router-link>
         <router-link tag="a" to="/dashboard" class="navbar-item">Dashboard</router-link>
         <router-link tag="a" to="/profile" class="navbar-item">Profile</router-link>
+        <router-link tag="a" to="/userverification" class="navbar-item" v-if="user.role == 'admin'">Users verification</router-link>
+        <router-link tag="a" to="/usermanagement" class="navbar-item" v-if="user.role == 'admin'">Users management</router-link>
+        <router-link tag="a" to="/report" class="navbar-item" v-if="user.role == 'admin'">Report</router-link>
       </div>
 
       <div class="navbar-end">
