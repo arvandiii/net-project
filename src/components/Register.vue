@@ -29,6 +29,18 @@
               </div>
             </div>
 
+            <div class="field">
+              <label class="label">Role</label>
+              <div class="select">
+                <select>
+                  <option>Admin</option>
+                  <option>Teacher</option>
+                  <option>Staff</option>
+                  <option>Student</option>
+                </select>
+              </div>
+            </div>
+
             <br>
 
             <button class="button is-info is-fullwidth">Login</button>

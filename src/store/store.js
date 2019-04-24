@@ -4,7 +4,7 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 const users = [
-  null,
+  {},
   { name: "ali", role: "admin" },
   { name: "reza", role: "teacher" },
   { name: "melika", role: "student" },
@@ -13,7 +13,7 @@ const users = [
 
 export const store = new Vuex.Store({
   state: {
-    user: users[0]
+    user: users[2]
   },
   getters: {
     user: state => {
