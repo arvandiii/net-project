@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "bulma": "^0.7.4",
+    "moment": "^2.24.0",
+    "underscore": "^1.9.1",
     "vue": "^2.5.11",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.0.6",
