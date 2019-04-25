@@ -3,8 +3,9 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
+let userIndex = 0;
 const users = [
-  {},
+  { name: null, role: "guest" },
   { name: "ali", role: "admin" },
   { name: "reza", role: "teacher" },
   { name: "melika", role: "student" },
@@ -13,7 +14,7 @@ const users = [
 
 export const store = new Vuex.Store({
   state: {
-    user: users[2]
+    user: users[userIndex]
   },
   getters: {
     user: state => {
@@ -21,6 +22,12 @@ export const store = new Vuex.Store({
     }
   },
   mutations: {
-    changeUser(state) {}
+    changeUser(state) {
+      userIndex++;
+      if (userIndex >= users.length) {
+        userIndex = 0;
+      }
+      state.user = users[userIndex];
+    }
   }
 });
