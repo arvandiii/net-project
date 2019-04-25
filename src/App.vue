@@ -1,6 +1,6 @@
 <template>
   <div>
-    <component :is="dynamicHeader"></component>
+    <app-header></app-header>
     <router-view></router-view>
     user: {{user.name}} {{user.role}}
     <button @click="changeUser">Change user</button>
@@ -8,9 +8,7 @@
 </template>
 
 <script>
-import AdminHeader from "./components/Header/AdminHeader.vue";
-import StudentStaffTeacherHeader from "./components/Header/StudentStaffTeacherHeader.vue";
-import GuestHeader from "./components/Header/GuestHeader.vue";
+import Header from "./components/Header/index.vue";
 
 export default {
   data() {
@@ -24,27 +22,10 @@ export default {
   computed: {
     user() {
       return this.$store.getters.user;
-    },
-    dynamicHeader() {
-      const user = this.$store.state.user;
-      switch (user.role) {
-        case "admin":
-          return "app-admin-header";
-        case "student":
-          return "app-student-staff-teacher-header";
-        case "staff":
-          return "app-student-staff-teacher-header";
-        case "teacher":
-          return "app-student-staff-teacher-header";
-        default:
-          return "app-guest-header";
-      }
     }
   },
   components: {
-    "app-admin-header": AdminHeader,
-    "app-student-staff-teacher-header": StudentStaffTeacherHeader,
-    "app-guest-header": GuestHeader
+    "app-header": Header
   }
 };
 </script>
