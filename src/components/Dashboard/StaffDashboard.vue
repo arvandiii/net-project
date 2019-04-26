@@ -17,7 +17,7 @@
           </h4>
 
           <p>
-            <strong>Problem:</strong>
+            <strong>{{actionModalData.from}}:</strong>
             {{actionModalData.msg}}
           </p>
           <p v-for="(paraf, index) in actionModalData.parafs" :key="index">
@@ -75,7 +75,7 @@
           </td>
           <td>
             <p>
-              <strong>Problem:</strong>
+              <strong>{{issue.from}}:</strong>
               {{issue.msg}}
             </p>
             <p v-for="(paraf, index) in issue.parafs" :key="index">
@@ -152,6 +152,7 @@ export default {
           title: "Fix loby window",
           msg: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
           priority: "High",
+          from: "Arvandi",
           assignedTo: [{ hasSeen: false, staff: "Ahmadi" }],
           dateAdded: 1556179693374,
           state: "Open",
@@ -162,6 +163,7 @@ export default {
           title: "Loby is hot",
           msg: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
           priority: "Low",
+          from: "Besharati",
           assignedTo: [{ hasSeen: true, staff: "Ahmadi" }],
           dateAdded: 1556179683374,
           state: "Closed",
@@ -173,6 +175,7 @@ export default {
           title: "Internet problem",
           msg: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
           priority: "Low",
+          from: "Akbari",
           assignedTo: [{ hasSeen: false, staff: "Ahmadi" }],
           dateAdded: 1555979393374,
           state: "open",
@@ -183,6 +186,7 @@ export default {
           title: "Fix library window",
           msg: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
           priority: "Low",
+          from: "Arvandi",
           assignedTo: [
             { hasSeen: true, staff: "Mohseni" },
             { hasSeen: false, staff: "Ahmadi" }
