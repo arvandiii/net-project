@@ -2,6 +2,7 @@
   <section class="section">
     <div class="container">
       <div class="column is-8 is-offset-2">
+        <h1 class="title">Verify users</h1>
         <div class="box" v-for="(newUser, index) in newUsers" :key="index">
           <div class="columns">
             <div class="column">
