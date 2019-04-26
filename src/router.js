@@ -5,6 +5,7 @@ import Register from "./components/Register.vue";
 import Profile from "./components/Profile.vue";
 import UserManagement from "./components/UserManagement.vue";
 import UserVerification from "./components/UserVerification.vue";
+import Report from "./components/Report.vue";
 
 export const routes = [
   { path: "/", component: Home },
@@ -13,5 +14,6 @@ export const routes = [
   { path: "/login", component: Login },
   { path: "/register", component: Register },
   { path: "/userverification", component: UserVerification },
-  { path: "/usermanagement", component: UserManagement }
+  { path: "/usermanagement", component: UserManagement },
+  { path: "/report", component: Report }
 ];
