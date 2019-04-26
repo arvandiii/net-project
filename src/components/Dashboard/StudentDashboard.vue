@@ -88,6 +88,20 @@
               :class="[issue.state == 'Closed'?'is-success':'is-info']"
             >{{issue.state}}</span>
           </td>
+          <td>
+            <div class="buttons has-addons">
+              <button class="button" :disabled="issue.state == 'Open'">
+                <span class="icon has-text-success">
+                  <i class="fas fa-smile"></i>
+                </span>
+              </button>
+              <button class="button" :disabled="issue.state == 'Open'">
+                <span class="icon has-text-danger">
+                  <i class="fas fa-frown"></i>
+                </span>
+              </button>
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -116,7 +130,8 @@ export default {
         "Message",
         "Priority",
         "Assigned to",
-        "State"
+        "State",
+        "Feedback"
       ],
       issues: [
         {
@@ -149,7 +164,7 @@ export default {
           priority: "Low",
           assignedTo: [{ hasSeen: false, staff: "Ahmadi" }],
           dateAdded: 1555979393374,
-          state: "open"
+          state: "Open"
         },
         {
           title: "Fix library window",
@@ -160,7 +175,7 @@ export default {
             { hasSeen: false, staff: "Ahmadi" }
           ],
           dateAdded: 1556079193374,
-          state: "open"
+          state: "Open"
         }
       ]
     };
@@ -183,7 +198,7 @@ export default {
         priority: this.modal.isHighPriority ? "High" : "Low",
         assignedTo: [{ hasSeen: false, staff: this.modal.assignedTo }],
         dateAdded: Date.now(),
-        state: "open"
+        state: "Open"
       });
       closeModal();
     },
